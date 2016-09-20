@@ -15,7 +15,7 @@ First & Rest | `head, *rest = xs` | `[head, ...rest] = xs`
 First, Last, Middle | `head, *middles, tail = xs` |
 **Comparison** | |
 chained comparisons | `1 < x <= 9` | `1 < x && x <= 9` | left associative in JS
-ternary | `x if pred else y` | `pred ? x : y;`
+ternary | `x if pred else y` | `pred ? x : y;` | for some predicate
 truthiness | `if x` | `if (x)` | JS: bool, int, float, str only
 **Math** | | 
 exponents | `x **= y ** z` | `x **= y ** z;` | ES2016
@@ -30,8 +30,11 @@ add to | `u.add(x)` | `u.add(x)` | multi-typed, py: also `u |= {x}`
 element of | `x in u` | `u.has(x)` 
 remove from | `u.remove(x)` | `u.delete(x)` | py: also `u -= {x}`
 size | `len(u)` | `u.length` 
-union in place | `u |= v` | | py: O(|v|)
-union new object | `u | v` | | py: O(|v| + |u|)
+union in place | `u |= v` | | py: `O|v| where |v| <= |u|`
+union new object | `u | v` | | py: `O(|v| + |u|)`
+intersection new | `u & v` | `v.filter(x => u.has(x))` | `O|v| where |v| <= |u|`
+difference in place | `u -= v` | `` | `O|v|`
+difference new | `u - v` | `` | sim.
 **Arrays / Lists** |  | 
 length | `len(xs)` | `xs.length`
 slicing  | `xs[start:end:step]` | `xs.slice(start, [end]);` | 
