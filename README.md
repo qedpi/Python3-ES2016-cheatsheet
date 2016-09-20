@@ -16,15 +16,17 @@ First, Last, Middle | `head, *middles, tail = xs` |
 **Comparison** | |
 chained comparisons | `1 < x <= 9` | `1 < x && x <= 9` | left associative in JS
 ternary | `x if pred else y` | `pred ? x : y;`
+truthiness | `if x` | `if (x)` | JS: bool, int, float, str only
 **Math** | | 
-exponents | `x **= y ** z` | `x **= y ** z;` | ES7
+exponents | `x **= y ** z` | `x **= y ** z;` | ES2016
 int division  | `x // y` | `Math.floor(x / y);` | 
 increments | `x += 1; x -= 1` | `x ++; x--;`
 **Arrays / Lists** |  | 
 length | `len(xs)` | `xs.length`
 slicing  | `xs[start:end:step]` | `xs.slice(start, [end]);` | 
-any / some | `any(map(pred, xs))` | `xs.some(pred)`
-all / every | `all(map(pred, xs))` | `xs.every(pred)`
+any / some | `any(map(pred, xs))` | `xs.some(pred)` | for some predicate
+all / every | `all(map(pred, xs))` | `xs.every(pred)` | sim
+existance | `x in xs` | `xs.includes(x)` | ES2016
 **Loops** | |
 for each | `for x in xs:` | `for (x in xs){}` |
 enumerate | `for i, x in enumerate(xs):` | `xs.forEach((x, i) => ...)`
