@@ -15,13 +15,16 @@ First & Rest | `head, *rest = xs` | `[head, ...rest] = xs`
 First, Last, Middle | `head, *middles, tail = xs` |
 **Comparison** | |
 chained comparisons | `1 < x <= 9` | `1 < x && x <= 9` | left associative in JS
+ternary | `x if pred else y` | `pred ? x : y;`
 **Math** | | 
 exponents | `x **= y ** z` | `x **= y ** z;` | ES7
 int division  | `x // y` | `Math.floor(x / y);` | 
 increments | `x += 1; x -= 1` | `x ++; x--;`
 **Arrays / Lists** |  | 
 slicing  | `xs[start:end:step]` | `xs.slice(start, [end]);` | 
-**IO** | | 
+**Loops** | |
+for each | `for x in xs:` | `for (x in xs){}`
+**IO** | | c
 print | `print(x)` | `console.log(x);` 
 interpolation | `f'my age is {age + 1}' \` | `` `my age is ${age + 1} `` 
 aka template strings | `'years old'` |  `` years old` ``
