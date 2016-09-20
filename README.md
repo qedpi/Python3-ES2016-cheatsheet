@@ -30,8 +30,10 @@ existance | `x in xs` | `xs.includes(x)` | ES2016
 **Loops** | |
 for each | `for x in xs:` | `for (x in xs){}` |
 enumerate | `for i, x in enumerate(xs):` | `xs.forEach((x, i) => ...)`
-**IO** | | c
+**IO & Strings** | | c
 print | `print(x)` | `console.log(x);` 
+split (by space) | `s.split()` | `s.split(' ')` | py: space default, js reqs arg
+join (by comma) | `','.join(xs)` | `xs.join()` | js: comma default
 interpolation | `f'my age is {age + 1}' \` | `` `my age is ${age + 1} `` 
 aka template strings | `'years old'` |  `` years old` ``
 **Functional** | | 
