@@ -21,6 +21,17 @@ truthiness | `if x` | `if (x)` | JS: bool, int, float, str only
 exponents | `x **= y ** z` | `x **= y ** z;` | ES2016
 int division  | `x // y` | `Math.floor(x / y);` | 
 increments | `x += 1; x -= 1` | `x ++; x--;`
+abs | `abs(-1)` | `Math.abs(-1)`
+**Sets** | |
+init | `u = {}` | `var u = new Set();`| py: also `set()`
+from array | `u = {*xs}` | `var u = new Set(xs);` | py: also `set(xs)`
+to array | `xs = [*u]` | `var xs = [...u];` | py: also `list(u)`
+add to | `u.add(x)` | `u.add(x)` | multi-typed, py: also `u |= {x}`
+element of | `x in u` | `u.has(x)` 
+remove from | `u.remove(x)` | `u.delete(x)` | py: also `u -= {x}`
+size | `len(u)` | `u.length` 
+union in place | `u |= v` | | py: O(|v|)
+union new object | `u | v` | | py: O(|v| + |u|)
 **Arrays / Lists** |  | 
 length | `len(xs)` | `xs.length`
 slicing  | `xs[start:end:step]` | `xs.slice(start, [end]);` | 
@@ -43,7 +54,7 @@ multi-airy | `lambda x, y: x + y` | `(x, y) => x + y;`
 bind to var | `f = lambda x: x + 1` | `var f = x => x + 1;`
 map | `sqrs = map(square, xs)` | `sqrs = xs.map(square);`
 filter | `odds = filter(is_odd, xs)` | `odds = xs.filter(is_odd);`
-reduce | `sum = reduce(add, xs)` | `sum = xs.reduce(add);` | py: from functools import reduce
+reduce | `sum = reduce(add, xs)` | `sum = xs.reduce(add);` | py: import from functools
   | `` | `;` | 
   | `` | `;` | 
   | `` | `;` | 
