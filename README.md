@@ -32,12 +32,16 @@ remove from | `u.remove(x)` | `u.delete(x)` | py: also `u -= {x}`
 size | `len(u)` | `u.length` 
 union in place | `u |= v` | | py: `O|v| where |v| <= |u|`
 union new object | `u | v` | | py: `O(|v| + |u|)`
+intersection in place | `u &= v` | `` |
 intersection new | `u & v` | `v.filter(x => u.has(x))` | `O|v| where |v| <= |u|`
 difference in place | `u -= v` | `` | `O|v|`
-difference new | `u - v` | `` | sim.
+difference new | `u - v` | `u.filter(x => !v.has(x))`  | `O|u|`
 **Arrays / Lists** |  | 
+access by index | `xs[i]` | `xs[i]` | py: allows negative indices
 length | `len(xs)` | `xs.length`
 slicing  | `xs[start:end:step]` | `xs.slice(start, [end]);` | 
+adding to end | `xs.append(x)` | `xs.push(x)`
+concat in place | `xs.extend(ys)` | ` xs.concat(ys, zs) ` | py: `xs += ys` fails for nonlocal, can't chain to functional call 
 any / some | `any(map(pred, xs))` | `xs.some(pred)` | for some predicate
 all / every | `all(map(pred, xs))` | `xs.every(pred)` | sim
 existance | `x in xs` | `xs.includes(x)` | ES2016
