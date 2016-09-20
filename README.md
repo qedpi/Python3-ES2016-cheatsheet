@@ -17,11 +17,15 @@ First, Last, Middle | `head, *middles, tail = xs` |
 chained comparisons | `1 < x <= 9` | `1 < x && x <= 9` | left associative in JS
 **Math** | | 
 exponents | `x **= y ** z` | `x **= y ** z;` | ES7
+int division  | `x // y` | `Math.floor(x / y);` | 
+increments | `x += 1; x -= 1` | `x ++; x--;`
+**Arrays / Lists** |  | 
+slicing  | `xs[start:end:step]` | `xs.slice(start, [end]);` | 
 **IO** | | 
 print | `print(x)` | `console.log(x);` 
 interpolation | `f'my age is {age + 1}' \` | `` `my age is ${age + 1} `` 
 aka template strings | `'years old'` |  `` years old` ``
-**Functional Prog. ** | | 
+**Functional** | | 
 unary lambdas | `lambda x: x + 1` | `x => x + 1;`
 nullary | `lambda : 1` | `() => 1;`
 multi-airy | `lambda x, y: x + y` | `(x, y) => x + y;`
