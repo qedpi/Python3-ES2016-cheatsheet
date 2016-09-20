@@ -21,9 +21,13 @@ exponents | `x **= y ** z` | `x **= y ** z;` | ES7
 int division  | `x // y` | `Math.floor(x / y);` | 
 increments | `x += 1; x -= 1` | `x ++; x--;`
 **Arrays / Lists** |  | 
+length | `len(xs)` | `xs.length`
 slicing  | `xs[start:end:step]` | `xs.slice(start, [end]);` | 
+any / some | `any(map(pred, xs))` | `xs.some(pred)`
+all / every | `all(map(pred, xs))` | `xs.every(pred)`
 **Loops** | |
-for each | `for x in xs:` | `for (x in xs){}`
+for each | `for x in xs:` | `for (x in xs){}` |
+enumerate | `for i, x in enumerate(xs):` | `xs.forEach((x, i) => ...)`
 **IO** | | c
 print | `print(x)` | `console.log(x);` 
 interpolation | `f'my age is {age + 1}' \` | `` `my age is ${age + 1} `` 
