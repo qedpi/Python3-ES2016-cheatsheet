@@ -24,4 +24,7 @@ unary lambdas | `lambda x: x + 1` | `x => x + 1;`
 nullary | `lambda : 1` | `() => 1;`
 multi-airy | `lambda x, y: x + y` | `(x, y) => x + y;`
 bind to var | `f = lambda x: x + 1` | `var f = x => x + 1;`
-map | squares = `map(square, xs)` | `oe;`
+map | `sqrs = map(square, xs)` | `sqrs = xs.map(square);`
+filter | `odds = filter(is_odd, xs)` | `odds = xs.filter(is_odd);`
+reduce | `sum = reduce(add, xs)` | `sum = xs.reduce(add);` | py: from functools import reduce
+  | `` | `;` | 
