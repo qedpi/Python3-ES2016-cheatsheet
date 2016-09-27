@@ -57,6 +57,13 @@ interpolation | `f'my age is {age + 1}' \` | `` `my age is ${age + 1} ``
 aka template strings | `'years old'` |  `` years old` ``
 **Functions** | |
 declaration | `def f(x):` | `function f(x){}` | js: hoisted to top
+global var access | ` ` | ` ` | by default
+global var mutate | `global x; x = 2` | | js: by default, py: global hoisted to start of function
+global var dec inside | `global x; x = 2` | |
+same name local var | `x = 2` | `let/const x = 2;`
+precedence | | local vars / params, global vars
+**Objects** | | 
+
 **Functional** | | 
 unary lambdas | `lambda x: x + 1` | `x => x + 1;`
 nullary | `lambda : 1` | `() => 1;`
