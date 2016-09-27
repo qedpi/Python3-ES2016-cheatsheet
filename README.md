@@ -6,7 +6,7 @@ Task | Python 3 | ES2016 | Notes
 --- | --- | --- | ---
 **Assignment** | | 
 Variables | `y = 1` | `var y = 1;`
-Block scope | `` | `let y = 1`
+Block scope | `.` | `let y = 1;`
 Constants | `Y = 1` | `const Y = 1;` | py: only a naming convention ES2015: can't reassign, but mutable if object is
 Many at once | `x = 1; y = 2` | `var x = 1, y = 2;`
 unpacking / destructuring | `x, y = 2, 1` | `var [x, y] = [1, 2];` 
@@ -55,6 +55,8 @@ split (by space) | `s.split()` | `s.split(' ')` | py: space default, js reqs arg
 join (by comma) | `','.join(xs)` | `xs.join()` | js: comma default
 interpolation | `f'my age is {age + 1}' \` | `` `my age is ${age + 1} `` 
 aka template strings | `'years old'` |  `` years old` ``
+**Functions** | |
+declaration | `def f(x):` | `function f(x){}`
 **Functional** | | 
 unary lambdas | `lambda x: x + 1` | `x => x + 1;`
 nullary | `lambda : 1` | `() => 1;`
