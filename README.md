@@ -56,7 +56,7 @@ join (by comma) | `','.join(xs)` | `xs.join()` | js: comma default
 interpolation | `f'my age is {age + 1}' \` | `` `my age is ${age + 1} `` 
 aka template strings | `'years old'` |  `` years old` ``
 **Functions** | |
-declaration | `def f(x):` | `function f(x){}`
+declaration | `def f(x):` | `function f(x){}` | js: hoisted to top
 **Functional** | | 
 unary lambdas | `lambda x: x + 1` | `x => x + 1;`
 nullary | `lambda : 1` | `() => 1;`
