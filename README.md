@@ -10,6 +10,8 @@ Block scope | ` ` | `let y = 1;`
 Constants | `Y = 1` | `const Y = 1;` | py: only a naming convention ES2015: can't reassign, but mutable if object is
 Many at once | `x = 1; y = 2` | `var x = 1, y = 2;`
 unpacking / destructuring | `x, y = 2, 1` | `var [x, y] = [1, 2];` 
+local existance | `'x' in locals()` |
+global existance | `'x' in globals()` |
 **Unpacking / spread** | | 
 Swap | `x, y = y, x` | `[x, y] = [y, x]`;
 First & Rest | `head, *rest = xs` | `[head, ...rest] = xs` 
@@ -63,7 +65,7 @@ global var dec inside | `global x; x = 2` | |
 same name local var | `x = 2` | `let/const x = 2;`
 precedence | | local vars / params, global vars
 **Objects** | | 
-
+has attribute | `hasattr(obj, 'attr_name')` |
 **Functional** | | 
 unary lambdas | `lambda x: x + 1` | `x => x + 1;`
 nullary | `lambda : 1` | `() => 1;`
@@ -80,3 +82,5 @@ reduce | `sum = reduce(add, xs)` | `sum = xs.reduce(add);` | py: import from fun
   | `` | `;` | 
   | `` | `;` | 
   | `` | `;` | 
+  
+Information and feedback from: StackOverflow, JS Docs, PY Docs, Robin Pham
