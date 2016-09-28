@@ -48,6 +48,7 @@ concat in place | `xs.extend(ys)` | ` xs.concat(ys, zs) ` | py: `xs += ys` fails
 any / some | `any(map(pred, xs))` | `xs.some(pred)` | for some predicate
 all / every | `all(map(pred, xs))` | `xs.every(pred)` | sim
 existance | `x in xs` | `xs.includes(x)` | ES2016
+zip | `zip(xs, ys)` | | eg: for x, y in zip(xs, ys): f(x, y)
 **Loops** | |
 for each | `for x in xs:` | `for (x in xs){}` |
 enumerate | `for i, x in enumerate(xs):` | `xs.forEach((x, i) => ...)`
