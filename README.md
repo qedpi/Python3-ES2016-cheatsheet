@@ -25,7 +25,7 @@ exponents | `x **= y ** z` | `x **= y ** z;` | ES2016
 int division  | `x // y` | `Math.floor(x / y);` | 
 increments | `x += 1; x -= 1` | `x ++; x--;`
 abs | `abs(-1)` | `Math.abs(-1)`
-arbitrarily large ints | `by default` | `use external library` | JS: https://github.com/jtobey/javascript-bignum
+arbitrarily large ints | `by default` | `use external library` | JS: https://github.com/jtobey/javascript-bignum, [Pyinfo](https://www.python.org/dev/peps/pep-0237/)
 **Sets** | |
 init | `u = {}` | `var u = new Set();`| py: also `set()`
 from array | `u = {*xs}` | `var u = new Set(xs);` | py: also `set(xs)`
