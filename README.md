@@ -10,6 +10,7 @@ Block scope | ` ` | `let y = 1;`
 Constants | `Y = 1` | `const Y = 1;` | py: only a naming convention ES2015: can't reassign, but mutable if object is
 Many at once | `x = 1; y = 2` | `var x = 1, y = 2;`
 unpacking / destructuring | `x, y = 2, 1` | `var [x, y] = [1, 2];` 
+Many to same value | `x = y = 1` | 
 local existance | `'x' in locals()` |
 global existance | `'x' in globals()` |
 **Unpacking / spread** | | 
